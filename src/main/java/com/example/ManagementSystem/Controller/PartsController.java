@@ -34,13 +34,13 @@ public class PartsController {
         Parts savedPart = partsService.getPartById(partId);
         return ResponseEntity.status(HttpStatus.OK).body(savedPart);
     }
-//
-//    @PostMapping("/removeParts/{partId}")
-//    public ResponseEntity<?> removePart(@PathVariable Long partId,@RequestBody RemovePartsRequest removePartsRequest){
-//        partsService.removePart(partId, removePartsRequest.getQuantity());
-//        return ResponseEntity.ok("Quantity Reduced");
-//    }
-//
+
+    @PostMapping("/removeParts/{partId}")
+    public ResponseEntity<?> removePart(@PathVariable Long partId,@RequestBody RemovePartsRequest removePartsRequest){
+        partsService.removePart(partId, removePartsRequest.getQuantity());
+        return ResponseEntity.ok("Quantity Reduced");
+    }
+
 //    @PatchMapping("/{partId}/name")
 //    public ResponseEntity<PartsResponse> updateName(@PathVariable Long partId, @RequestBody UpdateNameRequest updatedName){
 //        PartsResponse updated = partsService.updateName(partId, updatedName.getName());
