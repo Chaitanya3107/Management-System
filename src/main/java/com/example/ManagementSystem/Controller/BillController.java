@@ -30,9 +30,9 @@ public class BillController {
         return ResponseEntity.status(HttpStatus.OK).body(billList);
     }
 
-//    @GetMapping("/{billId}")
-//    public ResponseEntity<Bill> getBillById(@PathVariable Long billId){
-//        Bill bill = billService.getBill(billId);
-//        return ResponseEntity.status(HttpStatus.OK).body(bill);
-//    }
+    @GetMapping("/{billId}")
+    public ResponseEntity<Bill> getBillById(@PathVariable Long billId){
+        Bill bill = billService.getBill(billId);
+        return ResponseEntity.status(HttpStatus.OK).body(bill);
+    }
 }
