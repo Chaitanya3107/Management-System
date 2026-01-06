@@ -46,12 +46,12 @@ public class PartsController {
         PartsResponse updated = partsService.updateName(partId, updatedName.getName());
         return ResponseEntity.ok(updated);
     }
-//
-//    @PatchMapping("/{partId}/quantity")
-//    public ResponseEntity<PartsResponse> updateQuantity(@PathVariable Long partId, @RequestBody UpdateQuantityRequest updateQuantity){
-//        PartsResponse updated = partsService.updateQuantity(partId, updateQuantity.getQuantity());
-//        return ResponseEntity.ok(updated);
-//    }
+
+    @PatchMapping("/{partId}/quantity")
+    public ResponseEntity<PartsResponse> updateQuantity(@PathVariable Long partId, @RequestBody UpdateQuantityRequest updateQuantity){
+        PartsResponse updated = partsService.updateQuantity(partId, updateQuantity.getQuantity());
+        return ResponseEntity.ok(updated);
+    }
 //
 //    @PatchMapping("/{partId}/sellingPrice")
 //    public ResponseEntity<PartsResponse> updateSellingPrice(@PathVariable Long partId, @RequestBody UpdateSellingPriceRequest updatedSellingPrice){
