@@ -58,15 +58,11 @@ public class PartsController {
         PartsResponse updated = partsService.updateSellingPrice(partId, updatedSellingPrice.getSellingPrice());
         return ResponseEntity.ok(updated);
     }
-//
-//    @DeleteMapping("/{partId}")
-//    public ResponseEntity<?> deletePart(@PathVariable Long partId){
-//         partsService.deletePart(partId);
-//         return ResponseEntity.ok("Deleted");
-//    }
 
-
-
-
+    @DeleteMapping("/{partId}")
+    public ResponseEntity<?> deletePart(@PathVariable Long partId){
+         partsService.deletePart(partId);
+         return ResponseEntity.ok("Deleted");
+    }
 
 }
