@@ -40,7 +40,6 @@ public class PartsController {
         partsService.removePart(partId, removePartsRequest.getQuantity());
         return ResponseEntity.ok("Quantity Reduced");
     }
-
 //    @PatchMapping("/{partId}/name")
 //    public ResponseEntity<PartsResponse> updateName(@PathVariable Long partId, @RequestBody UpdateNameRequest updatedName){
 //        PartsResponse updated = partsService.updateName(partId, updatedName.getName());
