@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/parts")
-@CrossOrigin(origins = "*")  // need to add this later
+@CrossOrigin(origins = "*")
 public class PartsController {
 
     private final PartsService partsService;
