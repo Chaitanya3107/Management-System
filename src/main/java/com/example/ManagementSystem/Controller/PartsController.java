@@ -28,12 +28,12 @@ public class PartsController {
         List<Parts> allPartsList = partsService.getAllParts();
         return ResponseEntity.status(HttpStatus.OK).body(allPartsList);
     }
-//
-//    @GetMapping("/{partId}")
-//    public ResponseEntity<Parts> getPart(@PathVariable Long partId){
-//        Parts savedPart = partsService.getPartById(partId);
-//        return ResponseEntity.status(HttpStatus.OK).body(savedPart);
-//    }
+
+    @GetMapping("/{partId}")
+    public ResponseEntity<Parts> getPart(@PathVariable Long partId){
+        Parts savedPart = partsService.getPartById(partId);
+        return ResponseEntity.status(HttpStatus.OK).body(savedPart);
+    }
 //
 //    @PostMapping("/removeParts/{partId}")
 //    public ResponseEntity<?> removePart(@PathVariable Long partId,@RequestBody RemovePartsRequest removePartsRequest){
