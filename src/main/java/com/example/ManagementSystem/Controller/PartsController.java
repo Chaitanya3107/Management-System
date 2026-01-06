@@ -23,11 +23,11 @@ public class PartsController {
         Parts savedPart = partsService.addParts(parts);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedPart);
     }
-//    @GetMapping
-//    public ResponseEntity<List<Parts>> getAllParts(){
-//        List<Parts> allPartsList = partsService.getAllParts();
-//        return ResponseEntity.status(HttpStatus.OK).body(allPartsList);
-//    }
+    @GetMapping
+    public ResponseEntity<List<Parts>> getAllParts(){
+        List<Parts> allPartsList = partsService.getAllParts();
+        return ResponseEntity.status(HttpStatus.OK).body(allPartsList);
+    }
 //
 //    @GetMapping("/{partId}")
 //    public ResponseEntity<Parts> getPart(@PathVariable Long partId){
