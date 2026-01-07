@@ -50,7 +50,7 @@ public class PartsService {
         Parts part = partsRepository.findById(partId).orElseThrow(()-> new RuntimeException("Part not found"));
         part.setName(name);
         partsRepository.save(part);
-        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getBrand(),part.getSellingPrice(),part.getStockQuantity());
+        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getSellingPrice(),part.getStockQuantity());
         return updatedPart;
     }
 
@@ -59,7 +59,7 @@ public class PartsService {
         Parts part = partsRepository.findById(partId).orElseThrow(()-> new RuntimeException("Part not found"));
         part.setStockQuantity(part.getStockQuantity() + quantity);
         partsRepository.save(part);
-        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getBrand(),part.getSellingPrice(),part.getStockQuantity());
+        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getSellingPrice(),part.getStockQuantity());
         return updatedPart;
     }
 
@@ -68,16 +68,7 @@ public class PartsService {
         Parts part = partsRepository.findById(partId).orElseThrow(()-> new RuntimeException("Part not found"));
         part.setSellingPrice(sellingPrice);
         partsRepository.save(part);
-        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getBrand(),part.getSellingPrice(),part.getStockQuantity());
-        return updatedPart;
-    }
-
-    // update part brand
-    public PartsResponse updateBrand(Long partId,String brand){
-        Parts part = partsRepository.findById(partId).orElseThrow(()-> new RuntimeException("Part not found"));
-        part.setBrand(brand);
-        partsRepository.save(part);
-        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getBrand(),part.getSellingPrice(),part.getStockQuantity());
+        PartsResponse updatedPart = new PartsResponse(part.getName(),part.getSellingPrice(),part.getStockQuantity());
         return updatedPart;
     }
 
