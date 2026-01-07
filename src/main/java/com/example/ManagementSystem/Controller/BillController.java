@@ -13,7 +13,6 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/bills")
-@CrossOrigin(origins = "*")
 public class BillController {
 
     private final BillService billService;
