@@ -28,6 +28,8 @@ public class Bill {
     @OneToMany(mappedBy = "bill", cascade = CascadeType.ALL)
     private List<SaleItems> saleItems;
 
-
+    public String getFormattedBillNumber() {
+        return String.format("BILL-%04d", this.id);
+    }
 
 }
