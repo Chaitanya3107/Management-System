@@ -20,8 +20,6 @@ public class Parts {
     @Column(nullable = false)
     private String name;
 
-    private String brand;
-
     @Column(nullable = false)
     private BigDecimal sellingPrice;
 
