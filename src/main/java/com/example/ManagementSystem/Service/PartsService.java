@@ -19,7 +19,17 @@ public class PartsService {
 
     // add parts, with initial quantity
     public Parts addParts(Parts parts){
-        return partsRepository.save(parts);
+        boolean validatePartName = validatePartName(parts.getName());
+        if(validatePartName){
+            return partsRepository.save(parts);
+        }
+        else{
+            throw new RuntimeException("Part name is invalid");
+        }
+    }
+
+    private boolean validatePartName(String name){
+        return name!=null && !name.isEmpty();
     }
 
     // get all parts
